@@ -1,0 +1,18 @@
+<ng-include src="'views/header.html'"></ng-include>
+
+<div class="container">
+	<section class="fo-content row">
+		<div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="champion in championsViewModel.championsData">
+			<div class="fo-list-item clearfix">
+				<h3 class="fo-list-item-title"><a ui-sref="season({year: champion.season, driverId: champion.DriverStandings[0].Driver.driverId})">{{::champion.season}}</a></h3>
+				<div class="fo-list-item-pilot">
+					<img class="fo-list-item-img" ng-src="images/trophy_icon.png" width="50" height="50" alt="Trophy">
+					<div class="fo-info">
+						<span class="fo-name"><a href="{{::champion.DriverStandings[0].Driver.url}}" target="_blank">{{::champion.DriverStandings[0].Driver.givenName}} {{::champion.DriverStandings[0].Driver.familyName}}</a></span>
+						<span class="fo-company">{{::champion.DriverStandings[0].Constructors[0].name}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

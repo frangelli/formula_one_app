@@ -1,0 +1,84 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body {
+	padding-top: 100px;
+	background-color: #eee;
+}
+
+/** HEAEDER **/
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 70px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #464646;
+	z-index: 1;
+
+	.fo-app-title {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 1.5em;
+		text-transform: uppercase;
+	}
+}
+/** CONTENT **/
+.fo-list-item, .fo-list-item-2 {
+	height: 150px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #fff;
+}
+
+.fo-list-item {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.fo-list-item-title {
+	margin:0;
+	padding: 20px;
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.fo-list-item-img {
+	float:left;
+	margin-right: 10px;
+}
+
+.fo-list-item-pilot {
+	padding: 20px;
+}
+
+
+.fo-info {
+	font-style: italic;
+	color: #464646;
+	float: left;
+
+	.fo-name {
+		font-size: 1.3em;
+		display: block;
+	}
+
+	.fo-extra {
+		font-style: normal;
+		font-size: 1em;
+		display: block;
+		text-transform: uppercase;
+	}
+
+	.fo-company {
+		font-size: 0.9em;
+		display:block;
+	}
+}

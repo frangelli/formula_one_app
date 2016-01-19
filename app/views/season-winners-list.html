@@ -1,0 +1,26 @@
+<ng-include src="'views/header.html'"></ng-include>
+
+<div class="container">
+	<section class="fo-content row">
+		<div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="winner in winnersViewModel.winnersData">
+			<div class="fo-list-item-2 clearfix">
+				<h3 class="fo-list-item-title">{{::winner.raceName}}</h3>
+				<div class="fo-list-item-pilot">
+					<div class="fo-info col-md-4  col-sm-6 col-xs-6">
+						<img class="fo-list-item-img" ng-if="winner.Results[0].Driver.driverId == winnersViewModel.seasonChampionId" ng-src="images/trophy_icon.png" width="50" height="50" alt="Helmet">
+						<img class="fo-list-item-img" ng-hide="winner.Results[0].Driver.driverId == winnersViewModel.seasonChampionId" ng-src="images/helmet.png" width="50" height="50" alt="Helmet">
+						<span class="fo-name"><a href="{{::winner.Results[0].Driver.url}}" target="_blank">{{::winner.Results[0].Driver.givenName}} {{::winner.Results[0].Driver.familyName}}</a></span>
+						<span class="fo-company">{{::winner.Results[0].Constructor.name}}</span>
+					</div>
+					<div class="fo-info col-md-4 col-sm-6 col-xs-6 text-center hidden-xs">
+						<p class="fo-extra">LAPS: {{::winner.Results[0].laps}}</p>
+						<p class="fo-extra">TIME: {{::winner.Results[0].Time.time}}</p>
+					</div>
+					<div class="fo-info col-md-4 hidden-sm hidden-xs text-center">
+						<p class="fo-extra">{{::winner.Circuit.circuitName}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
