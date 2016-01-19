@@ -14,10 +14,4 @@
         'angular-loading-bar'
     ]);
 
-    angular.module('FormulaOne').run(['$rootScope', function ($rootScope) {
-        $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
-            console.log(error);
-        });
-    }]);
-
 }());

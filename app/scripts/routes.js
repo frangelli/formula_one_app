@@ -19,9 +19,9 @@
 				controllerAs: 'championsViewModel',
 				templateUrl: 'views/champions-list.html',
 				resolve: {
-					championsData: function(ErgastService) {
+					championsData: ['ErgastService', function(ErgastService) {
 						return ErgastService.fetchChampions();
-					}
+					}]
 				}
 			},
 			'season': {
@@ -34,9 +34,9 @@
 				controllerAs: 'winnersViewModel',
 				templateUrl: 'views/season-winners-list.html',
 				resolve: {
-					winnersData: function(ErgastService, $stateParams) {
+					winnersData: ['ErgastService', '$stateParams', function(ErgastService, $stateParams) {
 						return ErgastService.fetchSeasonWinners($stateParams.year);
-					}
+					}]
 				}
 			},
 			'404': {
